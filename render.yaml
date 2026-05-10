@@ -1,0 +1,7 @@
+[build]
+command = "npm install"
+
+[env]
+# Não defina valores sensíveis aqui. Use o Render Dashboard!
+# PORT será automaticamente atribuído pelo Render
+NODE_ENV = "production"
