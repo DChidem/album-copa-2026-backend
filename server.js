@@ -8,20 +8,10 @@ const authRoutes = require('./routes/auth');
 
 const app = express();
 
-// Middleware
-app.use(helmet());
 app.use(cors({
-  origin: [
-    'http://localhost:3000',
-    'http://localhost:8000',
-    'http://127.0.0.1:3000',
-    'http://127.0.0.1:8000',
-    process.env.FRONTEND_URL
-  ],
+  origin: true,
   credentials: true,
 }));
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 
 // Conexão ao MongoDB
 mongoose
