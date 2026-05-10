@@ -62,6 +62,8 @@ const TEAMS = [
 const STICKERS_PER_TEAM = 20;
 
 exports.register = async (req, res) => {
+  const { username, email, password, confirmPassword } = req.body || {};
+
   try {
     const { username, email, password, confirmPassword } = req.body;
 
